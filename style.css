@@ -20,13 +20,12 @@ body{
     position:fixed;
 }
 .header-title{
-    position: relative;
-    top: 5px;
+  margin: auto 0;
 }
 .header-menu ul{
     display: flex;
     position: relative;
-    left: 22rem;
+    left: 25rem;
     list-style: none;
     justify-content: center;
     align-items: center;
@@ -43,4 +42,63 @@ body{
 }
 .header-menu ul li a:hover{
     border-bottom: 2px solid #000;
+    background: #000;
+    color: rgb(255, 115, 0);
+    padding: 5px;
 }
+button:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+}
+button:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid #443ffc;
+	outline-offset: 3px;
+}
+
+.button {
+	pointer-events: auto;
+	cursor: pointer;
+	background: #e7e7e7;
+	border: none;
+	padding: 15px;
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	position: relative;
+	display: inline-block;
+    left: 25rem;
+}
+.button::before,
+.button::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.button--pandora{
+	background: #000;
+	font-weight: 700;
+	padding: 0;
+}
+button a span{
+    color: rgb(241, 109, 0);
+}
+.button--pandora span {
+	display: block;
+	background: #000;
+	padding: 12px;
+	border: 1px solid rgb(255, 115, 0);
+	transform: translate3d(-4px, -4px, 0);
+	transition: transform 0.3s cubic-bezier(0.7, 0, 0.2, 1);
+}
+.button--pandora:hover span {
+	transform: translate3d(-8px, -8px, 0);
+    background: rgb(241, 109, 0);
+    color: #000;
+}
+
